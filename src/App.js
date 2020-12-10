@@ -7,18 +7,18 @@ import Dashboard from "./components/dashboard/Dashboard";
 // import { PersistGate } from "redux-persist/integration/react";
 import { persistor, store } from "./redux/store";
 function App() {
-  return (
-    <Provider store={store}>
-      {/* <PersistGate loading={null} persistor={persistor}> */}
-      <Router>
-        <Switch>
-          <Route exact path="/" component={Login} />
-          <Route exact path="/home" component={Dashboard} />
-        </Switch>
-      </Router>
-      {/* </PersistGate> */}
-    </Provider>
-  );
+    return (
+        <Provider store={store}>
+            {/* <PersistGate loading={null} persistor={persistor}> */}
+            <Router>
+                <Switch>
+                    <Route exact path="/" component={Login} />
+                    <Route exact path="/dashboard" component={Dashboard} />
+                </Switch>
+            </Router>
+            {/* </PersistGate> */}
+        </Provider>
+    );
 }
 
 export default App;
